@@ -13,9 +13,7 @@ SET(CMAKE_INSTALL_LIBDIR "lib/arm-linux-androideabi")
 
 include(GNUInstallDirs)
 add_library(GL SHARED src/gl.c)
-set_target_properties(GL PROPERTIES
-    SOVERSION 1
-    PUBLIC_HEADER include/gl.h)
+set_target_properties(GL PROPERTIES PUBLIC_HEADER include/gl.h)
 target_include_directories(GL PRIVATE .)
 install(TARGETS GL
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

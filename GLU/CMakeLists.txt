@@ -13,9 +13,7 @@ SET(CMAKE_INSTALL_LIBDIR "lib/arm-linux-androideabi")
 
 include(GNUInstallDirs)
 add_library(GLU SHARED src/glu.c)
-set_target_properties(GLU PROPERTIES
-    SOVERSION 1
-    PUBLIC_HEADER include/glu.h)
+set_target_properties(GLU PROPERTIES PUBLIC_HEADER include/glu.h)
 target_include_directories(GLU PRIVATE .)
 install(TARGETS GLU
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
